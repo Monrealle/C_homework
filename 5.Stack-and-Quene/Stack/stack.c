@@ -46,7 +46,7 @@ OBJ* stack_delete(OBJ* top)
 }
 
 // Функция для просмотра элемента сверху
-int stack_peek(const OBJ* top)
+char stack_peek(const OBJ* top)
 {
     if(top == NULL)
     {
