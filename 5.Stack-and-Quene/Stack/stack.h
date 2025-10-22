@@ -3,7 +3,7 @@
 
 typedef struct tag_obj
 {
-    int data;
+    char data;
     struct tag_obj* next;
 } OBJ;
 
