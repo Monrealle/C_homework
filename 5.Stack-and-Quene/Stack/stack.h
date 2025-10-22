@@ -11,7 +11,7 @@ typedef struct tag_obj
 OBJ* stack_new(void);
 
 // Добавление элемента на стек
-OBJ* stack_push(OBJ* top, int data);
+OBJ* stack_push(OBJ* top, char data);
 
 // Удаление верхнего элемента
 OBJ* stack_pop(OBJ* top);
@@ -20,7 +20,7 @@ OBJ* stack_pop(OBJ* top);
 OBJ* stack_delete(OBJ* top);
 
 // Просмотр верхнего элемента
-int stack_peek(OBJ* top);
+char stack_peek(OBJ* top);
 
 // Вывод содержимого
 void stack_show(OBJ* top);
