@@ -20,7 +20,7 @@ OBJ* stack_pop(OBJ* top);
 OBJ* stack_delete(OBJ* top);
 
 // Просмотр верхнего элемента
-char stack_peek(OBJ* top);
+char stack_peek(const OBJ* top);
 
 // Вывод содержимого
 void stack_show(OBJ* top);
