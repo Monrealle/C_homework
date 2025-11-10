@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/sorting_yard.dir/src/Task_2/Sorting-yard.c.o" CMakeFiles/sorting_yard.dir/src/Stack/stack.c.o -o sorting_yard 
