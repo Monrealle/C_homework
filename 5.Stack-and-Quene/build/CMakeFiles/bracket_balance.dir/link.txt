@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/bracket_balance.dir/src/Task_1/Advancd-bracket-balance.c.o" CMakeFiles/bracket_balance.dir/src/Stack/stack.c.o -o bracket_balance 
