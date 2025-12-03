@@ -6,16 +6,14 @@ int main(void)
     int length = sizeof(arr) / sizeof(arr[0]);
     int zeros = 0;
 
-    for(int number = 0; number < length; number++)
+    for (int number = 0; number < length; number++)
     {
-        if (arr[number] == 0) 
+        if (arr[number] == 0)
         {
             zeros++;
         }
-
     }
 
     printf("Количество нулевых элементов: %d\n", zeros);
     return 0;
-
 }

@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int
-num_digs (int n, int radix)
+int num_digs(int n, int radix)
 {
     int c = 0;
     if (n == 0)
@@ -14,17 +13,16 @@ num_digs (int n, int radix)
     return c;
 }
 
-int
-main (void)
+int main(void)
 {
     int number;
     int digits[6];
-    printf ("Введите шестизначное число:\n");
-    scanf ("%i", &number);
+    printf("Введите шестизначное число:\n");
+    scanf("%i", &number);
 
-    if (num_digs (number, 10) != 6)
+    if (num_digs(number, 10) != 6)
     {
-        printf ("Число должно быть шестизначным.\n");
+        printf("Число должно быть шестизначным.\n");
         return 1;
     }
 
@@ -40,12 +38,12 @@ main (void)
 
     if (sum_1 == sum_2)
     {
-        printf ("Билет является счастливым\n");
+        printf("Билет является счастливым\n");
     }
 
     else
     {
-        printf ("Билет не является счастливым\n");
+        printf("Билет не является счастливым\n");
     }
 
     return 0;

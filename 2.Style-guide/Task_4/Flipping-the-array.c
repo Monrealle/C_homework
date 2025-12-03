@@ -1,18 +1,17 @@
 #include <stdio.h>
 
-int
-main (void)
+int main(void)
 {
     int number_m;
     int number_n;
-    printf ("Введите число m (До 10000)\n");
-    scanf ("%i", &number_m);
-    printf ("Введите число n (До 10000)\n");
-    scanf ("%i", &number_n);
+    printf("Введите число m (До 10000)\n");
+    scanf("%i", &number_m);
+    printf("Введите число n (До 10000)\n");
+    scanf("%i", &number_n);
 
     if (number_n < number_m)
     {
-        printf ("Ошибка: число m больше числа n\n");
+        printf("Ошибка: число m больше числа n\n");
     }
 
     else
@@ -48,13 +47,13 @@ main (void)
             numbers[number_n - i] = temp;
         }
 
-        printf ("\nПосле: ");
+        printf("\nПосле: ");
         for (int i = 0; i <= number_n; i++)
         {
-            printf ("%d ", numbers[i]);
+            printf("%d ", numbers[i]);
         }
 
-        printf ("\n");
+        printf("\n");
     }
 
     return 0;

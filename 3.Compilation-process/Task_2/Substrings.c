@@ -17,13 +17,12 @@ int main(void)
     int len_text_1 = strlen(text_1);
     int len_text_2 = strlen(text_2);
 
-    for (int i = 0; i <= len_text_1 - len_text_2; i++) 
+    for (int i = 0; i <= len_text_1 - len_text_2; i++)
     {
-        if (strncmp(&text_1[i], text_2, len_text_2) == 0) 
+        if (strncmp(&text_1[i], text_2, len_text_2) == 0)
         {
             count++;
         }
-
     }
 
     printf("Количество вхождений: %d\n", count);
