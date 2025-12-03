@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/Task_3.dir/src/Task_3/Lucky-tickets.c.o" -o Task_3 

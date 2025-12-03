@@ -1,0 +1,6 @@
+/home/Monreale/git/C/2.Style-guide/build/CMakeFiles/Task_1.dir
+/home/Monreale/git/C/2.Style-guide/build/CMakeFiles/Task_2.dir
+/home/Monreale/git/C/2.Style-guide/build/CMakeFiles/Task_3.dir
+/home/Monreale/git/C/2.Style-guide/build/CMakeFiles/Task_4.dir
+/home/Monreale/git/C/2.Style-guide/build/CMakeFiles/edit_cache.dir
+/home/Monreale/git/C/2.Style-guide/build/CMakeFiles/rebuild_cache.dir
