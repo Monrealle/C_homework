@@ -11,8 +11,11 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y clang-format-18
+          sudo apt-get install -y clang-format cmake make gcc
 
       - name: Check format
         run: |
-          find . -type f \( -name "*.c" -o -name "*.h" \) ! -path "./build/*" ! -path "*/build/*" | xargs clang-format-18 --style=file --dry-run -Werror
+          find . -type f \( -name "*.c" -o -name "*.h" \) \
+            ! -path "*/build/*" \
+            ! -path "*/.git/*" \
+            | xargs clang-format --style=file --dry-run -Werror
