@@ -15,5 +15,5 @@ jobs:
 
       - name: Check format
         run: |
-          find . -type f \( -name "*.c" -o -name "*.h" \) ! -path "./build/*" ! -path "*/build/*" | xargs clang-format-1>
+          find . -type f \( -name "*.c" -o -name "*.h" \) ! -path "./build/*" ! -path "*/build/*" | xargs clang-format-1
 
