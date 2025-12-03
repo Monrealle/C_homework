@@ -10,17 +10,17 @@ int main(void)
     scanf("%i", &number_2);
     int examination = number_1 % number_2;
 
-    if(examination != 0)
+    if (examination != 0)
     {
-        if(number_2 > number_1)
+        if (number_2 > number_1)
         {
             printf("Делитель больше делимого\n");
         }
 
         else
         {
-            
-            while(number_1 >= number_2)
+
+            while (number_1 >= number_2)
             {
                 number_1 = number_1 - number_2;
                 result += 1;
