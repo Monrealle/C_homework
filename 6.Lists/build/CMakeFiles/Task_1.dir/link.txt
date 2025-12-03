@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/Task_1.dir/src/Task_1/Sorted-list.c.o" -o Task_1 
