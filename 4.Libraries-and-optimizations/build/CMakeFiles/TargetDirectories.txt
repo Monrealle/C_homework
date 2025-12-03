@@ -1,0 +1,3 @@
+/home/Monreale/git/C/4.Libraries-and-optimizations/build/CMakeFiles/Task_1.dir
+/home/Monreale/git/C/4.Libraries-and-optimizations/build/CMakeFiles/edit_cache.dir
+/home/Monreale/git/C/4.Libraries-and-optimizations/build/CMakeFiles/rebuild_cache.dir
