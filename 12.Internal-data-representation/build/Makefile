@@ -129,6 +129,19 @@ binary_converter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_converter.dir/build.make CMakeFiles/binary_converter.dir/build
 .PHONY : binary_converter/fast
 
+#=============================================================================
+# Target rules for targets named double_converter
+
+# Build rule for target.
+double_converter: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 double_converter
+.PHONY : double_converter
+
+# fast build rule for target.
+double_converter/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/double_converter.dir/build.make CMakeFiles/double_converter.dir/build
+.PHONY : double_converter/fast
+
 src/Task_1/binary.o: src/Task_1/binary.c.o
 .PHONY : src/Task_1/binary.o
 
@@ -177,6 +190,30 @@ src/Task_1/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/binary_converter.dir/build.make CMakeFiles/binary_converter.dir/src/Task_1/main.c.s
 .PHONY : src/Task_1/main.c.s
 
+src/Task_2/double.o: src/Task_2/double.c.o
+.PHONY : src/Task_2/double.o
+
+# target to build an object file
+src/Task_2/double.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/double_converter.dir/build.make CMakeFiles/double_converter.dir/src/Task_2/double.c.o
+.PHONY : src/Task_2/double.c.o
+
+src/Task_2/double.i: src/Task_2/double.c.i
+.PHONY : src/Task_2/double.i
+
+# target to preprocess a source file
+src/Task_2/double.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/double_converter.dir/build.make CMakeFiles/double_converter.dir/src/Task_2/double.c.i
+.PHONY : src/Task_2/double.c.i
+
+src/Task_2/double.s: src/Task_2/double.c.s
+.PHONY : src/Task_2/double.s
+
+# target to generate assembly for a file
+src/Task_2/double.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/double_converter.dir/build.make CMakeFiles/double_converter.dir/src/Task_2/double.c.s
+.PHONY : src/Task_2/double.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +223,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... binary_converter"
+	@echo "... double_converter"
 	@echo "... src/Task_1/binary.o"
 	@echo "... src/Task_1/binary.i"
 	@echo "... src/Task_1/binary.s"
 	@echo "... src/Task_1/main.o"
 	@echo "... src/Task_1/main.i"
 	@echo "... src/Task_1/main.s"
+	@echo "... src/Task_2/double.o"
+	@echo "... src/Task_2/double.i"
+	@echo "... src/Task_2/double.s"
 .PHONY : help
 
 

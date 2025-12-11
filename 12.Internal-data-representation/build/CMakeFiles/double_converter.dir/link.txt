@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/double_converter.dir/src/Task_2/double.c.o -o Double_under_the_microscope 

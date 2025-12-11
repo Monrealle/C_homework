@@ -23,15 +23,6 @@
 //Value Computed by CMake
 12.Internal-data-representation_SOURCE_DIR:STATIC=/home/Monreale/git/C/12.Internal-data-representation
 
-//Value Computed by CMake
-Binary_BINARY_DIR:STATIC=/home/Monreale/git/C/12.Internal-data-representation/build
-
-//Value Computed by CMake
-Binary_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-Binary_SOURCE_DIR:STATIC=/home/Monreale/git/C/12.Internal-data-representation
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -342,5 +333,5 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
-_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=FALSE
+_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 
