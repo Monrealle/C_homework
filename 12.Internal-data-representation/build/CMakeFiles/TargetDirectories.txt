@@ -1,0 +1,3 @@
+/home/Monreale/git/C/12.Internal-data-representation/build/CMakeFiles/binary_converter.dir
+/home/Monreale/git/C/12.Internal-data-representation/build/CMakeFiles/edit_cache.dir
+/home/Monreale/git/C/12.Internal-data-representation/build/CMakeFiles/rebuild_cache.dir
