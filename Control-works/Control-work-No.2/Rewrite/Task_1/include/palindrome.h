@@ -4,8 +4,8 @@
 #include <stdbool.h>
 
 typedef struct Node {
-    int data;
-    struct Node* next;
+  int data;
+  struct Node *next;
 } Node;
 
 // Функции для работы со списком
@@ -15,7 +15,7 @@ typedef struct Node {
  * - param: data Значение для узла
  * - return: Указатель на созданный узел или NULL при ошибке
  */
-Node* create_node(int data);
+Node *create_node(int data);
 
 /**
  * Добавляет элемент в конец списка
@@ -23,19 +23,19 @@ Node* create_node(int data);
  *          data Значение для добавления
  * - return: Указатель на начало списка
  */
-Node* append_node(Node* head, int data);
+Node *append_node(Node *head, int data);
 
 /**
  * Освобождает память, занятую списком
  * - param: head Указатель на начало списка
  */
-void free_list(Node* head);
+void free_list(Node *head);
 
 /**
  * Печатает элементы списка
  * - param: head Указатель на начало списка
  */
-void print_list(Node* head);
+void print_list(Node *head);
 
 /**
  * Проверяет, является ли список палиндромом
@@ -43,14 +43,14 @@ void print_list(Node* head);
  * - return: true если список палиндром
  *           false в противном случае
  */
-bool is_palindrome(Node* head);
+bool is_palindrome(Node *head);
 
 /**
  * Реверсирует список
  * - param: head Указатель на начало списка
  * - return: Указатель на начало реверсированного списка
  */
-Node* reverse_list(Node* head);
+Node *reverse_list(Node *head);
 
 /**
  * Сравнивает два списка на равенство
@@ -59,6 +59,6 @@ Node* reverse_list(Node* head);
  * - return: true если списки равны
  *           false в противном случае
  */
-bool compare_lists(Node* list1, Node* list2);
+bool compare_lists(Node *list1, Node *list2);
 
 #endif // PALINDROME_H
