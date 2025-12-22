@@ -33,4 +33,3 @@ int sort(int* array, int count)
 
     return changed;
 }
-
