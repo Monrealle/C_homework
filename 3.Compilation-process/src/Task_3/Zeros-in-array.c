@@ -7,7 +7,7 @@ int main()
     printf("Введите размер массива: ");
     scanf("%d", &size);
 
-    int *arr = (int*)malloc(size * sizeof(int));
+    int* arr = (int*)malloc(size * sizeof(int));
     if (arr == NULL)
     {
         printf("Ошибка выделения памяти\n");

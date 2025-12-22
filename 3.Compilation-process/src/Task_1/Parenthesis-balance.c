@@ -4,7 +4,7 @@
 
 int main()
 {
-    char *text = NULL;
+    char* text = NULL;
     size_t buffer_size = 0;
     int balance = 0;
     int i;
@@ -12,14 +12,16 @@ int main()
     printf("Введите текст: ");
     size_t chars_read = getline(&text, &buffer_size, stdin);
 
-    if (chars_read <= 0) {
+    if (chars_read <= 0)
+    {
         printf("Ошибка ввода\n");
         free(text);
         return 1;
     }
 
     // Удаляем символ новой строки
-    if (chars_read > 0 && text[chars_read - 1] == '\n') {
+    if (chars_read > 0 && text[chars_read - 1] == '\n')
+    {
         text[chars_read - 1] = '\0';
         chars_read--;
     }

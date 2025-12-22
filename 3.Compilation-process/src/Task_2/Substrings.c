@@ -12,7 +12,8 @@ int main()
 
     // Удаляем символ новой строки
     size_t len1 = strlen(text_1);
-    if (len1 > 0 && text_1[len1 - 1] == '\n') {
+    if (len1 > 0 && text_1[len1 - 1] == '\n')
+    {
         text_1[len1 - 1] = '\0';
         len1--;
     }
@@ -22,13 +23,15 @@ int main()
 
     // Удаляем символ новой строки
     size_t len2 = strlen(text_2);
-    if (len2 > 0 && text_2[len2 - 1] == '\n') {
+    if (len2 > 0 && text_2[len2 - 1] == '\n')
+    {
         text_2[len2 - 1] = '\0';
         len2--;
     }
 
     // Если подстрока пустая, выводим 0
-    if (len2 == 0) {
+    if (len2 == 0)
+    {
         printf("Количество вхождений: 0\n");
         return 0;
     }
