@@ -1,5 +1,0 @@
-/home/Monreale/git/C/3.Compilation-process/build/CMakeFiles/Task_1.dir
-/home/Monreale/git/C/3.Compilation-process/build/CMakeFiles/Task_2.dir
-/home/Monreale/git/C/3.Compilation-process/build/CMakeFiles/Task_3.dir
-/home/Monreale/git/C/3.Compilation-process/build/CMakeFiles/edit_cache.dir
-/home/Monreale/git/C/3.Compilation-process/build/CMakeFiles/rebuild_cache.dir

@@ -1,19 +1,36 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(void)
+int main()
 {
-    char arr[10] = { 1, 2, 3, 4, 15, 22 }; // для проверки
-    int length = sizeof(arr) / sizeof(arr[0]);
-    int zeros = 0;
+    int size;
+    printf("Введите размер массива: ");
+    scanf("%d", &size);
 
-    for (int number = 0; number < length; number++)
+    int *arr = (int*)malloc(size * sizeof(int));
+    if (arr == NULL)
     {
-        if (arr[number] == 0)
+        printf("Ошибка выделения памяти\n");
+        return 1;
+    }
+
+    printf("Введите %d элементов массива:\n", size);
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int zeros = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] == 0)
         {
             zeros++;
         }
     }
 
     printf("Количество нулевых элементов: %d\n", zeros);
+
+    free(arr);
     return 0;
 }

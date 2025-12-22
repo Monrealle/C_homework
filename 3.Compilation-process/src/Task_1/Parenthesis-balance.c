@@ -1,42 +1,66 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int main(void)
+int main()
 {
-    char text[100];
-    int length = sizeof(text) / sizeof(text[0]);
+    char *text = NULL;
+    size_t buffer_size = 0;
     int balance = 0;
+    int i;
 
-    printf("Введите текст\n");
-    fgets(text, sizeof(text), stdin);
+    printf("Введите текст: ");
+    size_t chars_read = getline(&text, &buffer_size, stdin);
 
-    for (int number = 0; number < length; number++)
+    if (chars_read <= 0) {
+        printf("Ошибка ввода\n");
+        free(text);
+        return 1;
+    }
+
+    // Удаляем символ новой строки
+    if (chars_read > 0 && text[chars_read - 1] == '\n') {
+        text[chars_read - 1] = '\0';
+        chars_read--;
+    }
+
+    size_t length = chars_read;
+
+    // Проверяем баланс скобок
+    int error = 0;
+    for (i = 0; i < length; i++)
     {
-        if (text[number] == '(')
+        if (text[i] == '(')
         {
             balance++;
         }
-
-        if (text[number] == ')')
+        else if (text[i] == ')')
         {
             balance--;
-
             if (balance < 0)
             {
-                printf("Нарушена вложенность скобок\n");
+                error = 1;
                 break;
             }
         }
     }
 
-    if (balance == 0)
+    // Выводим результат
+    if (!error && balance == 0)
     {
-        printf("Количество скобок одинаково\n");
+        printf("Баланс скобок соблюден\n");
     }
 
-    else if (balance > 1)
+    else if (balance > 0)
     {
-        printf("Нехватает закрывающихся скобок\n");
+        printf("Не хватает %d закрывающих скобок\n", balance);
     }
 
+    else
+    {
+        printf("Нарушена вложенность скобок\n");
+    }
+
+    free(text);
     return 0;
 }

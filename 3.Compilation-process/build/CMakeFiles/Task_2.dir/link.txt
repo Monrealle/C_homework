@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/Task_2.dir/src/Task_2/Substrings.c.o -o Task_2 

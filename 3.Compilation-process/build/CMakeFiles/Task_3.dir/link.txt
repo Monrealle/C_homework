@@ -1,1 +1,0 @@
-/usr/bin/cc "CMakeFiles/Task_3.dir/src/Task_3/Zeros-in-array.c.o" -o Task_3 

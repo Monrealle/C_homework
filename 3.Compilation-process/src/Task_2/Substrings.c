@@ -1,25 +1,54 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(void)
+int main()
 {
     char text_1[100];
     char text_2[100];
     int count = 0;
 
-    printf("Введите строку\n");
-    scanf("%99[^\n]", text_1);
-    getchar();
-    printf("Введите подстроку\n");
-    scanf("%99[^\n]", text_2);
-    getchar();
+    printf("Введите строку: ");
+    fgets(text_1, sizeof(text_1), stdin);
 
-    int len_text_1 = strlen(text_1);
-    int len_text_2 = strlen(text_2);
+    // Удаляем символ новой строки
+    size_t len1 = strlen(text_1);
+    if (len1 > 0 && text_1[len1 - 1] == '\n') {
+        text_1[len1 - 1] = '\0';
+        len1--;
+    }
 
-    for (int i = 0; i <= len_text_1 - len_text_2; i++)
+    printf("Введите подстроку: ");
+    fgets(text_2, sizeof(text_2), stdin);
+
+    // Удаляем символ новой строки
+    size_t len2 = strlen(text_2);
+    if (len2 > 0 && text_2[len2 - 1] == '\n') {
+        text_2[len2 - 1] = '\0';
+        len2--;
+    }
+
+    // Если подстрока пустая, выводим 0
+    if (len2 == 0) {
+        printf("Количество вхождений: 0\n");
+        return 0;
+    }
+
+    // Проверяем все возможные позиции начала подстроки
+    for (int i = 0; i <= (int)(len1 - len2); i++)
     {
-        if (strncmp(&text_1[i], text_2, len_text_2) == 0)
+        int match = 1;
+
+        // Сравниваем символы вручную
+        for (int j = 0; j < len2; j++)
+        {
+            if (text_1[i + j] != text_2[j])
+            {
+                match = 0;
+                break;
+            }
+        }
+
+        if (match)
         {
             count++;
         }

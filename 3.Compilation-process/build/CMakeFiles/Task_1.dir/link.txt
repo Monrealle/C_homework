@@ -1,1 +1,0 @@
-/usr/bin/cc "CMakeFiles/Task_1.dir/src/Task_1/Parenthesis-balance.c.o" -o Task_1 
