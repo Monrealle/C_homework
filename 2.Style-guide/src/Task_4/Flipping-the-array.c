@@ -1,60 +1,40 @@
 #include <stdio.h>
 
-int main(void)
-{
-    int number_m;
-    int number_n;
-    printf("Введите число m (До 10000)\n");
-    scanf("%i", &number_m);
-    printf("Введите число n (До 10000)\n");
-    scanf("%i", &number_n);
-
-    if (number_n < number_m)
-    {
-        printf("Ошибка: число m больше числа n\n");
+void reverse(int x[], int left, int right) {
+    while (left < right) {
+        int temp = x[left];
+        x[left] = x[right];
+        x[right] = temp;
+        left++;
+        right--;
     }
+}
 
-    else
-    {
-
-        int numbers[10000];
-        int total = number_m + number_n;
-
-        for (int i = 0; i <= total; i++)
-        {
-            numbers[i] = i;
-        }
-
-        for (int i = 0; i <= number_n / 2; i++)
-        {
-            int temp = numbers[i];
-            numbers[i] = numbers[number_n - i];
-            numbers[number_n - i] = temp;
-        }
-
-        int segment_size = number_n - number_m + 1;
-        for (int i = 0; i < segment_size / 2; i++)
-        {
-            int temp = numbers[i];
-            numbers[i] = numbers[segment_size - 1 - i];
-            numbers[segment_size - 1 - i] = temp;
-        }
-
-        for (int i = 0; i < number_m / 2; i++)
-        {
-            int temp = numbers[segment_size + i];
-            numbers[segment_size + i] = numbers[number_n - i];
-            numbers[number_n - i] = temp;
-        }
-
-        printf("\nПосле: ");
-        for (int i = 0; i <= number_n; i++)
-        {
-            printf("%d ", numbers[i]);
-        }
-
-        printf("\n");
+int main(void) {
+    int m, n;
+    printf("Введите m и n: ");
+    scanf("%d %d", &m, &n);
+    
+    int size = m + n;
+    int x[size]; // Теперь индексация от 0
+    
+    printf("Введите %d элементов:\n", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &x[i]);
     }
-
+    
+    // Развернуть весь массив
+    reverse(x, 0, size - 1);
+    // Развернуть первые n элементов (бывший конец)
+    reverse(x, 0, n - 1);
+    // Развернуть последние m элементов (бывшее начало)
+    reverse(x, n, size - 1);
+    
+    printf("Результат: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", x[i]);
+    }
+    printf("\n");
+    
     return 0;
 }
