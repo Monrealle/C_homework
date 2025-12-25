@@ -1,0 +1,4 @@
+/home/Monreale/git/C/5.Stack-and-Quene/build/CMakeFiles/bracket_balance.dir
+/home/Monreale/git/C/5.Stack-and-Quene/build/CMakeFiles/sorting_yard.dir
+/home/Monreale/git/C/5.Stack-and-Quene/build/CMakeFiles/edit_cache.dir
+/home/Monreale/git/C/5.Stack-and-Quene/build/CMakeFiles/rebuild_cache.dir

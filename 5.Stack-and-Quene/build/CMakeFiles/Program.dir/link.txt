@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/Program.dir/src/Stack/stack.c.o "CMakeFiles/Program.dir/src/Task_1/Advancd-bracket-balance.c.o" "CMakeFiles/Program.dir/src/Task_2/Sorting-yard.c.o" -o Program 
