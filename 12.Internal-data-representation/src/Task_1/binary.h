@@ -12,4 +12,3 @@ int decimal_representation(int binary);
 int binary_addition(int binary_1, int binary_2);
 
 #endif
-
