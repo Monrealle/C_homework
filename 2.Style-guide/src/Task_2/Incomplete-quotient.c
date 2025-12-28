@@ -1,78 +1,62 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(void)
-{
-    int a, b;
+int main(void) {
+    long long a, b;
+    
+    // Ввод данных
     printf("Введите делимое: ");
-    scanf("%d", &a);
+    if (scanf("%lld", &a) != 1) {
+        printf("Ошибка ввода делимого\n");
+        return 1;
+    }
+    
     printf("Введите делитель: ");
-    scanf("%d", &b);
-
-    if (b == 0)
-    {
+    if (scanf("%lld", &b) != 1) {
+        printf("Ошибка ввода делителя\n");
+        return 1;
+    }
+    
+    // Проверка деления на ноль
+    if (b == 0) {
         printf("Ошибка: деление на ноль\n");
         return 1;
     }
-
-    int quotient = 0;
-    int temp_a = a; // Будем работать с этой переменной
-
-    // Вычисляем неполное частное
-    if (a >= 0 && b > 0)
-    {
-        // Оба положительные
-        while (temp_a >= b)
-        {
-            temp_a = temp_a - b;
+    
+    long long quotient = 0;      // Неполное частное
+    long long remainder;         // Остаток
+    
+    // Приведение к случаю с положительным делителем
+    // Это упрощает логику вычислений
+    if (b < 0) {
+        a = -a;
+        b = -b;
+    }
+    
+    // Теперь b всегда положительное
+    if (a >= 0) {
+        // a положительное или ноль
+        remainder = a;
+        while (remainder >= b) {
+            remainder = remainder - b;
             quotient = quotient + 1;
         }
-    }
-
-    else if (a >= 0 && b < 0)
-    {
-        // a положительное, b отрицательное
-        while (temp_a >= -b)
-        {
-            temp_a = temp_a
-                + b; // вычитаем отрицательное = прибавляем положительное
-            quotient = quotient
-                - 1; // частное уменьшаем на 1 (результат отрицательный)
+    } else {
+        // a отрицательное
+        remainder = a;
+        while (remainder < 0) {
+            remainder = remainder + b;
+            quotient = quotient - 1;
         }
     }
-
-    else if (a < 0 && b > 0)
-    {
-        // a отрицательное, b положительное
-        while (temp_a <= -b)
-        {
-            temp_a
-                = temp_a + b; // прибавляем положительное (вычитаем по модулю)
-            quotient = quotient - 1; // частное отрицательное
-        }
-    }
-
-    else
-    { // a < 0 && b < 0
-        // Оба отрицательные
-        while (temp_a <= b)
-        {
-            temp_a = temp_a
-                - b; // вычитаем отрицательное = прибавляем положительное
-            quotient = quotient + 1; // частное положительное
-        }
-    }
-
-    if (temp_a > 0)
-    {
-        printf("Неполное частное: %d\n", quotient);
-        printf("Остаток: %d\n", temp_a);
-    }
-
-    else
-    {
-        printf("Частное: %d\n", quotient);
-        printf("Остаток: %d\n", temp_a);
-    }
-
+    
+    // Вывод результата
+    printf("Неполное частное: %lld\n", quotient);
+    printf("Остаток: %lld\n", remainder);
+    
+    // Проверка результата (можно закомментировать)
+    printf("Проверка: %lld = %lld * %lld + %lld\n", 
+           a >= 0 ? a : -a, b, quotient, a >= 0 ? remainder : -remainder);
+    
     return 0;
 }
