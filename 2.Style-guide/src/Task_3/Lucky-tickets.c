@@ -2,25 +2,28 @@
 
 int main()
 {
-    int lucky_count = 0;
+    // Массив для подсчёта количества трёхзначных чисел с каждой суммой цифр
+    int sums[28] = { 0 }; // Индексы от 0 до 27
 
-    for (int num = 0; num < 1000000; num++)
+    // Подсчитываем количество трёхзначных чисел (000-999)
+    for (int num = 0; num < 1000; num++)
     {
-        int part1 = num / 1000; // Первые три цифры
-        int part2 = num % 1000; // Последние три цифры
+        int digit1 = num / 100; // Первая цифра
+        int digit2 = (num / 10) % 10; // Вторая цифра
+        int digit3 = num % 10; // Третья цифра
+        int sum = digit1 + digit2 + digit3;
 
-        // Считаем суммы цифр для каждой части
-        int sum1 = (part1 / 100) + ((part1 / 10) % 10) + (part1 % 10);
-        int sum2 = (part2 / 100) + ((part2 / 10) % 10) + (part2 % 10);
+        sums[sum]++;
+    }
 
-        if (sum1 == sum2)
-        {
-            lucky_count++;
-        }
+    int total_lucky = 0;
+    for (int i = 0; i <= 27; i++)
+    {
+        total_lucky += sums[i] * sums[i];
     }
 
     printf(
-        "Общее количество шестизначных счастливых билетов: %d\n", lucky_count);
+        "Общее количество шестизначных счастливых билетов: %d\n", total_lucky);
 
     return 0;
 }
