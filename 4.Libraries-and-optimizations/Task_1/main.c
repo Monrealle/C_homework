@@ -12,7 +12,9 @@ int main(void)
         count++;
     }
 
-    int asembler = sort(array, count);
+    int asembler  = sort(array, count);
 
     return asembler;
+
 }
+
