@@ -15,9 +15,11 @@ build/
 # CMake
 CMakeCache.txt
 CMakeFiles/
-.CMakeLists.txt.swp
 cmake_install.cmake
 Makefile
+compile_commands.json
 
 # IDE
 .vscode/
+.idea/
+*.swp
